@@ -46,7 +46,207 @@ form {
 input,
 select,
 textarea {
+
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* =========================================
+   ITEM LIST
+========================================= */
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* カード */
+.item,
+.card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    background: white;
+
+    padding: 22px;
+    border-radius: 20px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.item:hover,
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(20, 33, 61, 0.1);
+}
+
+/* 画像 */
+.item img,
+.card img {
+    width: 130px;
+    height: 130px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+/* 情報 */
+.item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-info h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.item-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* ステータス */
+.status {
+    display: inline-block;
+
+    background: #eaf0ff;
+    color: #4169d5;
+
+    padding: 5px 14px;
+    margin-top: 10px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ========================================
+   LINKS & IMAGES
+======================================== */
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 80px;
+
+    border-top: 1px solid var(--border);
+
+    font-size: 13px;
+    color: var(--subtext);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 16px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    main {
+        margin: 30px auto;
+    }
+
+    .item,
+    .card {
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .item img,
+    .card img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .item-info h3 {
+        font-size: 16px;
+    }
+
+    .item-info p {
+        font-size: 12px;
+    }
+
+    form {
+        padding: 22px;
+    }
+
+    .search-area {
+        padding: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+
+/* スクロール時のヘッダー */
+header.scrolled {
+    box-shadow: 0 5px 25px rgba(20, 33, 61, 0.10);
+}
+
+/* カードがふわっと表示される */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 動きを減らす設定の利用者への対応 */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
 }
