@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>落とし物を投稿</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>落とし物を投稿</h1>
+    </header>
+
+    <main>
+        <form>
+            <p>
+                <label>落とし物名</label><br>
+                <input type="text" placeholder="例：黒い傘">
+            </p>
+
+            <p>
+                <label>発見場所</label><br>
+                <input type="text" placeholder="例：中央図書館">
+            </p>
+
+            <p>
+                <label>発見日時</label><br>
+                <input type="date">
+            </p>
+
+            <p>
+                <label>カテゴリ</label><br>
+                <select>
+                    <option>傘</option>
+                    <option>財布</option>
+                    <option>学生証</option>
+                    <option>文房具</option>
+                    <option>電子機器</option>
+                    <option>その他</option>
+                </select>
+            </p>
+
+            <p>
+                <label>詳細説明</label><br>
+                <textarea rows="5" cols="40"></textarea>
+            </p>
+
+            <p>
+                <label>写真</label><br>
+                <input type="file">
+            </p>
+
+            <button type="submit">投稿する</button>
+        </form>
+    </main>
+
+</body>
+</html>

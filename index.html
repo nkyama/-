@@ -10,11 +10,34 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>こんにちは！</h1>
-  <p>Webサイトを作っています。</p>
-  <button id="myButton">クリック</button>
-
-  <!-- JavaScriptを読み込む -->
+  <header>
+    <h1>新潟大学 忘れ物・落とし物共有サイト</h1>
+    <p>学内の落とし物情報を共有しよう</p>
+  </header>
+  
+  <main>
+    <h2>落とし物を探す</h2>
+    
+    <input type="text" placeholder="キーワードを入力">
+    <button>検索</button>
+    
+    <h2>新着の落とし物</h2>
+    
+    <div>
+      <h3>黒い傘</h3>
+      <p>発見場所：中央図書館</p>
+    </div>
+    
+    <div>
+      <h3>学生証</h3>
+      <p>発見場所：工学部棟</p>
+    </div>
+    
+    <button onclick="location.href='post.html'">
+      落とし物を投稿する
+    </button>
+  </main>
+  
   <script src="script.js"></script>
 </body>
 </html>
