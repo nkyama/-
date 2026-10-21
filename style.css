@@ -1,14 +1,397 @@
+/* =========================================
+   MODERN CAMPUS DESIGN
+========================================= */
+
+/* カラーテーマ */
+:root {
+    --primary: #14213d;
+    --accent: #4776e6;
+    --accent-hover: #315ed0;
+
+    --background: #f6f8fc;
+    --surface: #ffffff;
+
+    --text: #1e293b;
+    --subtext: #64748b;
+    --border: #e8edf5;
+
+    --shadow: 0 8px 30px rgba(20, 33, 61, 0.05);
+}
+
+/* 基本設定 */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-  background-color: lightblue;
-  text-align: center;
-  font-family: sans-serif;
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
 }
 
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid var(--border);
+
+    padding: 20px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--primary);
+}
+
+/* ナビゲーション */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--subtext);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* =========================================
+   MAIN
+========================================= */
+
+main {
+    width: min(1100px, 92%);
+    margin: 50px auto;
+}
+
+/* 見出し */
 h1 {
-  color: white;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--primary);
 }
 
-button {
-  padding: 10px 20px;
+h2 {
+    font-size: 24px;
+    font-weight: 750;
+    color: var(--primary);
+}
+
+h3 {
+    font-size: 19px;
+    color: var(--primary);
+}
+
+p {
+    color: var(--subtext);
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+button,
+input[type="submit"],
+input[type="button"] {
+    background: linear-gradient(135deg, #4776e6, #3451b2);
+    color: white;
+
+    border: none;
+    border-radius: 12px;
+
+    padding: 13px 26px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(71, 118, 230, 0.2);
+
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(71, 118, 230, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.search-area {
+    background: white;
+
+    padding: 28px;
+    margin-bottom: 40px;
+
+    border-radius: 22px;
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+form {
+    background: white;
+
+    padding: 35px;
+    border-radius: 22px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+textarea,
+select {
+    width: 100%;
+
+    padding: 14px 16px;
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+    border: 1px solid var(--border);
+
+    background: #f8fafc;
+    color: var(--text);
+
+    font-size: 15px;
+    font-family: inherit;
+
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(71, 118, 230, 0.1);
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* =========================================
+   ITEM LIST
+========================================= */
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* カード */
+.item,
+.card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    background: white;
+
+    padding: 22px;
+    border-radius: 20px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.item:hover,
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(20, 33, 61, 0.1);
+}
+
+/* 画像 */
+.item img,
+.card img {
+    width: 130px;
+    height: 130px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+/* 情報 */
+.item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-info h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.item-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* ステータス */
+.status {
+    display: inline-block;
+
+    background: #eaf0ff;
+    color: #4169d5;
+
+    padding: 5px 14px;
+    margin-top: 10px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =========================================
+   LINKS & IMAGES
+========================================= */
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 80px;
+
+    border-top: 1px solid var(--border);
+
+    font-size: 13px;
+    color: var(--subtext);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 16px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    main {
+        margin: 30px auto;
+    }
+
+    .item,
+    .card {
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .item img,
+    .card img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .item-info h3 {
+        font-size: 16px;
+    }
+
+    .item-info p {
+        font-size: 12px;
+    }
+
+    form {
+        padding: 22px;
+    }
+
+    .search-area {
+        padding: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
 }
