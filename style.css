@@ -259,3 +259,23 @@ header.scrolled {
     }
 
 }
+
+/* ログイン・新規登録ボタン */
+.login-button {
+    display: inline-block;
+    background-color: white;
+    color: #008000;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* マウスを重ねたとき */
+.login-button:hover {
+    background-color: #e8f5e9;
+    transform: translateY(-2px);
+}
