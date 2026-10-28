@@ -1,3 +1,10 @@
+:root {
+    --border: #dddddd;
+    --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    --accent: #008000;
+    --subtext: #666666;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
