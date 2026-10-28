@@ -325,3 +325,85 @@ form button {
 form button:hover {
     background-color: #006400;
 }
+/* =========================
+   ログイン画面のデザイン
+========================= */
+
+/* ログイン画面全体 */
+.auth-page {
+    background-color: #f5f7f5;
+    min-height: 100vh;
+}
+
+/* ログイン画面のメイン部分 */
+.auth-main {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* ログイン画面の見出し */
+.auth-main h2 {
+    text-align: center;
+    color: #333333;
+    margin: 30px 0 20px;
+}
+
+/* ログインフォーム */
+.auth-main form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ログイン画面の入力欄 */
+.auth-main input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* ログイン画面のボタン */
+.auth-main form button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* 新規登録ボタン */
+.auth-main #signup {
+    background-color: white;
+    color: #008000;
+    border: 2px solid #008000;
+}
+
+/* 新規登録ボタンにマウスを重ねたとき */
+.auth-main #signup:hover {
+    background-color: #e8f5e9;
+}
+
+/* メッセージ表示 */
+.auth-main #message {
+    text-align: center;
+    margin-top: 20px;
+    color: #555555;
+}
+
+/* スマホ表示 */
+@media (max-width: 600px) {
+    .auth-main {
+        width: auto;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .auth-main form {
+        padding: 20px;
+    }
+}
