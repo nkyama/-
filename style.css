@@ -46,10 +46,12 @@ form {
 input,
 select,
 textarea {
-
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+}
+
+textarea {
     min-height: 130px;
     resize: vertical;
 }
