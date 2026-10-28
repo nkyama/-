@@ -8,12 +8,20 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <h1>アカウント登録・ログイン</h1>
+<body class="auth-page">
 
-  <a href="index.html">← トップページに戻る</a>
+  <header>
+    <h1>新潟大学 忘れ物・落とし物共有サイト</h1>
+    <p>アカウント登録・ログイン</p>
+  </header>
 
-  <form id="auth-form">
+  <main class="auth-main">
+
+    <a href="index.html">← トップページに戻る</a>
+
+    <h2>ログイン・新規登録</h2>
+
+    <form id="auth-form">
     <label for="email">メールアドレス</label>
     <input id="email" type="email" required>
 
@@ -36,6 +44,8 @@
     <button id="logout" type="button">ログアウト</button>
   </section>
 
+  </main>
+  
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="mail.js"></script>
 </body>
