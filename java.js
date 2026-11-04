@@ -56,7 +56,7 @@ document.getElementById("signup").addEventListener(
       email,
       password,
       options: {
-        emailRedirectTo: window.location.origin + "/index.html"
+        emailRedirectTo: window.location.origin + "/lostfound/index.html"
       }
     });
 
@@ -92,7 +92,7 @@ form.addEventListener("submit", async (event) => {
   }
 
   showMessage("ログインしました！");
-  await updateScreen();
+  window.location.href = "index.html";
 });
 
 // ログアウト
